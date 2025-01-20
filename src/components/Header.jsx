@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DarkModeSwitch from "./DarkModeSwitch";
 
 export default function Header() {
   return (
@@ -15,12 +16,15 @@ export default function Header() {
           <Link href={"/about"}>About</Link>
         </li>
       </ul>
-      <Link href={"/"} className="flex items-center gap-1">
-        <span className="text-2xl font-bold py-1 px-2 bg-amber-500 rounded-lg">
-          IMDd
-        </span>
-        <span className="text-xl hidden sm:inline">Clone</span>
-      </Link>
+      <div className="flex items-center gap-4">
+        <DarkModeSwitch />
+        <Link href={"/"} className="flex items-center gap-1">
+          <span className="text-2xl font-bold py-1 px-2 bg-amber-500 rounded-lg">
+            IMDd
+          </span>
+          <span className="text-xl hidden sm:inline">Clone</span>
+        </Link>
+      </div>
     </div>
   );
 }
