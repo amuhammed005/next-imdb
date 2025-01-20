@@ -7,13 +7,19 @@ export default function Header() {
     <div className="max-w-6xl mx-auto p-3 flex justify-between items-center">
       <ul className="flex gap-4">
         <li>
-          <Link href={"/sign-in"}>Sign in</Link>
+          <Link href={"/sign-in"} className="hover:text-amber-500">
+            Sign in
+          </Link>
         </li>
         <li className="hidden sm:block">
-          <Link href={"/"}>Home</Link>
+          <Link href={"/"} className="hover:text-amber-500">
+            Home
+          </Link>
         </li>
         <li className="hidden sm:block">
-          <Link href={"/about"}>About</Link>
+          <Link href={"/about"} className="hover:text-amber-500">
+            About
+          </Link>
         </li>
       </ul>
       <div className="flex items-center gap-4">
