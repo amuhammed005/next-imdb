@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import DarkModeSwitch from "./DarkModeSwitch";
 import { SignedOut, SignInButton, UserButton, SignedIn } from "@clerk/nextjs";
 
-export default function Header() {
+function Header() {
   return (
     <div className="max-w-6xl mx-auto p-3 flex justify-between items-center">
       <ul className="flex gap-4">
@@ -38,3 +39,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default Header;

@@ -2,7 +2,7 @@
 import { ThemeProvider } from "next-themes";
 import React from "react";
 
-export default function ThemeComponent({ children }) {
+function ThemeComponent({ children }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
       <div className="text-gray-700 dark:text-gray-200 dark:bg-gray-700 min-h-screen select-none transition-colors duration-300">
@@ -11,3 +11,5 @@ export default function ThemeComponent({ children }) {
     </ThemeProvider>
   );
 }
+
+export default ThemeComponent;

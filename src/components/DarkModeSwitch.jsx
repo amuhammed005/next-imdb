@@ -8,24 +8,26 @@ export default function DarkModeSwitch() {
   const [mounted, setMounted] = useState(false);
   const currentTheme = theme === "system" ? systemTheme : theme;
 
-  useEffect(() => setMounted(true), []);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   if (!mounted) {
     return null;
   }
   return (
     <div>
-      {mounted &&
-        (currentTheme === "dark" ? (
-          <MdLightMode
-            onClick={() => setTheme("light")}
-            className="text-2xl cursor-pointer hover:text-amber-500"
-          />
-        ) : (
-          <MdDarkMode
-            onClick={() => setTheme("dark")}
-            className="text-2xl cursor-pointer hover:text-amber-500"
-          />
-        ))}
+      {mounted && currentTheme === "dark" ? (
+        <MdLightMode
+          onClick={() => setTheme("light")}
+          className="text-2xl cursor-pointer hover:text-amber-500"
+        />
+      ) : (
+        <MdDarkMode
+          onClick={() => setTheme("dark")}
+          className="text-2xl cursor-pointer hover:text-amber-500"
+        />
+      )}
     </div>
   );
 }
